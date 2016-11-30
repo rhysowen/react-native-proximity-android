@@ -1,0 +1,12 @@
+## Build
+build/
+
+# Android
+android/.idea/
+android/android.iml
+android/react-native-proximity-android.iml
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/local.properties
+android/proguard-rules.pro

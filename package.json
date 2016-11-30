@@ -1,0 +1,22 @@
+{
+  "name": "react-native-proximity-android",
+  "version": "1.0.0",
+  "description": "Detect proximity sensor value on Android",
+  "main": "index.android.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhysowen/react-native-proximity-android.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "proximity",
+    "sensor",
+    "android"
+  ],
+  "author": "Rhys Owen <contact@rhysowen.me> (http://rhysowen.me)",
+  "license": "ISC"
+}
