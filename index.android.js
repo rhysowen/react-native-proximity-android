@@ -3,16 +3,21 @@ import {
   NativeModules,
 } from 'react-native';
 
+const EVENT = 'OnSensorChange';
+
 const nativeModule = NativeModules.ProximityAndroid;
 
-const start = (callback) => {
+const startListener = (callback) => {
   nativeModule.startListener();
-  DeviceEventEmitter.addListener('OnSensorChange', e => callback(e));
+  DeviceEventEmitter.addListener(EVENT, e => callback(e));
 };
 
-const stop = () => nativeModule.stopListener();
+const stopListener = (listener) => {
+  nativeModule.stopListener();
+  DeviceEventEmitter.removeAllListeners(EVENT, listener);
+}
 
 module.exports = {
-  start,
-  stop,
+  startListener,
+  stopListener,
 };
