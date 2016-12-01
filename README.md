@@ -15,19 +15,22 @@ An Android RN Bridge for Proximity Sensor
 
 ### Import
 
+```js
     import Proximity from 'react-native-proximity-android';
+```
 
 ## Listeners & callback
 
+```js
     const proximityCallback = (event) => {
       const { data } = event;
     }
 
     componentDidMount() {
-      Proximity.start(proximityCallback);
+      Proximity.startListener(proximityCallback);
     }
 
     componentWillUnmount() {
-      Proximity.stop();
+      Proximity.stopListener(proximityCallback);
     }
-
+```
