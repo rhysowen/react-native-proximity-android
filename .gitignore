@@ -10,3 +10,6 @@ android/gradlew
 android/gradlew.bat
 android/local.properties
 android/proguard-rules.pro
+
+# OS X
+.DS_Store
