@@ -18,6 +18,7 @@ public class ProximityModule extends ReactContextBaseJavaModule implements Senso
 
     private static final String REACT_CLASS = "ProximityAndroid";
     private static final String ON_SENSOR_CHANGE = "OnSensorChange";
+    private static final String IS_NEAR_DEVICE = "IsNearDevice";
 
     private static final String DISTANCE_KEY = "distance";
 
@@ -52,6 +53,10 @@ public class ProximityModule extends ReactContextBaseJavaModule implements Senso
         WritableMap params = Arguments.createMap();
 
         double distance = event.values[0];
+        double maximumRange = mProximity.getMaximumRange();
+        boolean isNearDevice = distance < maximumRange;
+
+        params.putBoolean(IS_NEAR_DEVICE, isNearDevice);
         params.putDouble(DISTANCE_KEY, distance);
 
         mEventManager.sendEvent(ON_SENSOR_CHANGE, params);

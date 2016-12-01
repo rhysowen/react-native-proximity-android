@@ -27,7 +27,10 @@ import Proximity from 'react-native-proximity-android';
 
 ```js
 const proximityCallback = (event) => {
-  const { data } = event;
+  const {
+    data,
+    isNearDevice,
+  } = event;
 }
 
 componentDidMount() {
